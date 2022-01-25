@@ -1,9 +1,13 @@
-import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  );
 }
 
 export default App;

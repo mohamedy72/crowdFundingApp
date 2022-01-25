@@ -1,0 +1,109 @@
+.header {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 2%,
+      rgba(0, 0, 0, 0.12) 96%
+    ),
+    url("../../../assets/images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  padding: 1.5rem 0;
+  color: #fff;
+}
+
+.header .container {
+  position: relative;
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-mobile {
+  font-size: 1.5rem;
+}
+.header__nav-menu {
+  width: 100%;
+  background: #fff;
+  padding: 0 1rem;
+  border-radius: 5px;
+  color: var(--black);
+  left: 0;
+  position: absolute;
+  top: calc(-100% + 5rem);
+  box-shadow: 0 4px 25px 15px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__nav-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__nav-list li {
+  padding: 1rem 0;
+}
+
+.header__nav-list li:not(:last-child) {
+  border-bottom: 1px solid rgba(213, 199, 199, 0.501);
+}
+.header__nav-list li a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.header__nav-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 2%,
+        rgba(0, 0, 0, 0.12) 
+      ),
+      url("../../../assets/images/image-hero-desktop.jpg") no-repeat center
+        center/cover;
+  }
+
+  .header__nav-menu,
+  .header__nav-mobile {
+    display: none;
+  }
+
+  .header__nav-desktop {
+    display: block;
+    flex-basis: 1;
+  }
+
+  .header__nav-list {
+    flex-direction: row;
+    margin-right: auto;
+  }
+
+  .header__nav-list li {
+    margin-left: auto;
+  }
+
+  .header__nav-list li:not(:last-child) {
+    border: 0;
+    margin-right: 3.5rem;
+  }
+  .header__nav-list li a {
+    color: #fff;
+    font-size: 1.3rem;
+  }
+}

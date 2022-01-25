@@ -1,0 +1,9 @@
+.main-section {
+  z-index: 10;
+  margin-top: -5rem;
+  transform: translate(-50% 0);
+  background: #fff;
+  width: 60vw;
+  margin-inline: auto;
+  border-radius: 5px;
+}
